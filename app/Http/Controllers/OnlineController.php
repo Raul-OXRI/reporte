@@ -15,7 +15,7 @@ class OnlineController extends Controller
             ->join('votes as v', 'users.id', '=', 'v.userId')
             ->where('i.ticket', 0)
             ->whereIn('i.participacion', [1, 2])
-            ->select('i.nombre', 'i.dpi', 'i.sexo', 'i.telefono', 'i.cif')
+            ->select('i.nombre', 'i.dpi', 'i.sexo', 'i.telefono', 'i.cif', 'i.email')
             ->distinct()
             ->orderBy('i.nombre')
             ->get();
@@ -30,7 +30,7 @@ class OnlineController extends Controller
             ->join('votes as v', 'users.id', '=', 'v.userId')
             ->where('i.ticket', 0)
             ->whereIn('i.participacion', [1, 2])
-            ->select('i.nombre', 'i.dpi', 'i.cif', 'i.sexo', 'i.telefono')
+            ->select('i.nombre', 'i.dpi', 'i.telefono', 'i.email')
             ->distinct()
             ->orderBy('i.nombre')
             ->get()
@@ -40,10 +40,15 @@ class OnlineController extends Controller
                 return $item;
             });
 
-        $generatedAt = now()->format('d/m/Y');
-        $totalRegistros = $online->count();
-
-        $pdf = PDF::loadView('online.pdf', compact('online', 'generatedAt', 'totalRegistros'));
-        return $pdf->download('online.pdf');
+        $pdf = PDF::loadView('online.pdf', compact('online'));
+        return $pdf->download('Votos_Virtuales_58Asamblea.pdf');
+    }
+    public function exportPDFAll()
+    {
+        $online = online::orderBy('id')
+            ->take(500)
+            ->get();
+        $pdf = PDF::loadView('online.pdfAll', compact('online'));
+        return $pdf->download('500_Registros.pdf');
     }
 }

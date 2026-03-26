@@ -25,8 +25,8 @@
 							<tr>
 								<th>Nombre</th>
 								<th>DPI</th>
-								<th>Sexo</th>
 								<th>Teléfono</th>
+								<th>Correo Electrónico</th>
 								<th>CIF</th>
 							</tr>
 						</thead>
@@ -35,8 +35,8 @@
 								<tr>
 									<td>{{ $item->nombre }}</td>
 									<td>{{ $item->dpi }}</td>
-									<td>{{ $item->sexo }}</td>
 									<td>{{ $item->telefono }}</td>
+									<td>{{ $item->email }}</td>
 									<td>{{ $item->cif }}</td>
 								</tr>
 							@empty
