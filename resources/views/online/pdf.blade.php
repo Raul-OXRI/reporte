@@ -193,6 +193,36 @@
             </table>
         </div>
         @endforeach
+        <table style="width: 100%; border-collapse: collapse; margin-top: 5cm;">
+            <tr>
+                <td style="width: 50%; text-align: center; padding: 0 20px;">
+                    <div style="border-top: 1px solid black; width: 100%; margin-bottom: 10px;"></div>
+                    <p style="margin: 0; font-weight: bold; font-size: 14px;">Ing. Raúl Gerardo Sierra Chinchilla</p>
+                    <p style="margin: 0; font-size: 12px;">Jefe de Informática</p>
+                    </t>
+                <td style="width: 50%; text-align: center; padding: 0 20px;">
+                    <div style="border-top: 1px solid black; width: 100%; margin-bottom: 10px;"></div>
+                    <p style="margin: 0; font-weight: bold; font-size: 14px;">Nery Alexánder Morales Gutiérrez</p>
+                    <p style="margin: 0; font-size: 12px;">Coordinador de desarrollo de Software</p>
+                </td>
+            </tr>
+        </table>
+
+        <table style="width: 100%; border-collapse: collapse; margin-top: 5cm;">
+            <tr>
+                <td style="width: 50%; text-align: center; padding: 0 15px; height: 95xp; vertical-align: bottom;">
+                    <div style="border-top: 1px solid black; width: 100%; margin-bottom: 10px;"></div>
+                    <p style="margin: 0; font-weight: bold; font-size: 14px;">Lic. Raul Josué Chén Alvarado</p>
+                    <p style="margin: 0; font-size: 12px;">Vo. Bo. Auditor Interno</p>
+                </td>
+
+                <td style="width: 50%; text-align: center; padding: 0 15px; height: 95xp; vertical-align: bottom;">
+                    <div style="border-top: 1px solid black; width: 100%; margin-bottom: 10px;"></div>
+                    <p style="margin: 0; font-weight: bold; font-size: 14px;">Lcda. Gladis Lourdes Vásquez Palencia</p>
+                    <p style="margin: 0; font-size: 12px;">Vo. Bo. Vocal de Comisión de Vigilancia</p>
+                </td>
+            </tr>
+        </table>
         @endif
     </div>
 </body>
