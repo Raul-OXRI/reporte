@@ -143,7 +143,7 @@
                         <p class="title-sub">Cooperativa Cobán Responsabilidad Limitada</p>
                     </td>
                     <td class="meta">
-                        <div>Fehca: {{ now()->format('d/m/Y') }}</div>
+                        <div>Fecha: {{ now()->format('d/m/Y') }}</div>
                         <div>Registros: {{ $online->count() }}</div>
                     </td>
                 </tr>
